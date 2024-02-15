@@ -1,0 +1,16 @@
+ 
+node_modules/
+
+ 
+*.log
+
+ 
+.idea/
+.vscode/
+
+ 
+.env
+
+ 
+dist/
+build/

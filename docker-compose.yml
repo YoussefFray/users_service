@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  # PostgreSQL service
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: youssef
+      POSTGRES_DB: testDB
+    ports:
+      - "5432:5433"
+  
+  # Node.js service
+  app:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: youssef
+      DB_DATABASE: testDB
+    ports:
+      - "3000:3001"
