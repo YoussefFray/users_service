@@ -3,21 +3,21 @@
     "username": "postgres",
     "password": "youssef",
     "database": "testDB",
-    "host": "127.0.0.1",
+    "host": "postgres",  
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "youssef",
     "database": "testDB",
-    "host": "127.0.0.1",
+    "host": "postgres",  
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "youssef",
     "database": "testDB",
-    "host": "127.0.0.1",
+    "host": "postgres",  
     "dialect": "postgres"
   }
 }

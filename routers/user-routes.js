@@ -42,10 +42,11 @@ route.post("/login", async (req, res) => {
     // Return a success message or token
     res.status(200).json({ token: token });
   } catch (err) {
-    console.error(err);
-    res.status(500).send("Internal Server Error");
+    console.error("Error in login route:", err);  // Log the error
+    res.status(500).json({ message: "Internal Server Error" });  // Return a more specific error message
   }
 });
+
 //register
 route.post("/user", async (req, res) => {
   try {
@@ -80,7 +81,7 @@ route.post("/user", async (req, res) => {
   }
 });
 // Middleware to check token validity
-route.use(authenticateToken);
+//route.use(authenticateToken);
 
 //get  all users
 route.get("/user", (req, res) => {

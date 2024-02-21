@@ -1,0 +1,8 @@
+# .dockerignore
+
+# Files and directories to exclude
+node_modules
+npm-debug.log
+.DS_Store
+.env
+*.env
